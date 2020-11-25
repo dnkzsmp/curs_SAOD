@@ -4,23 +4,24 @@
 #include "startMenu.h"
 #include <iostream>
 
-void printVertex(Vertex *p) {
-    std::cout << p->data->fio << "\t";
-    std::cout << p->data->street << "\t";
-    std::cout << p->data->numOfHome << "\t";
-    std::cout << p->data->numOfFlat << "\t";
-    std::cout << p->data->dateOfSettling << "\n";
-}
-
 void searchInTree(Vertex *root) {
-    short int flat;
+    short int flat, home;
+    char day[3]{};
+    std::cout << "Enter home: ";
+    std::cin >> home;
     std::cout << "Enter flat: ";
     std::cin >> flat;
-    Vertex *p = Search(root, flat);
-    if (p != nullptr) {
-        printVertex(p);
-    } else
-        std::cout << "Not found\n";
+    std::cout << "Enter day: ";
+    std::cin >> day;
+    Search(root, home, flat, day);
+}
+
+void startA2(Vertex *&root, Queue &queue) {
+    int W[queue.getSize()];
+    for (int &i : W)
+        i = rand() % 100;
+    W[0] = 0;
+    A2(0, queue.getSize() - 1, queue, root, W);
 }
 
 void startMenu(Info **arr) {
@@ -47,7 +48,7 @@ Point:
             goto Point;
         case 4:
             queue.SelectSort();
-            A2(0, queue.getSize() - 1, queue, root);
+            startA2(root, queue);
             ObhodLeftToRight(root, quantity);
             std::cout << "Quantity: " << quantity << std::endl;
             goto Point;

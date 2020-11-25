@@ -37,5 +37,6 @@ void binarySearch(Info **arr, Queue &queue) {
     std::cout << "Enter key: ";
     std::cin >> key;
     binarySearch1(arr, key, queue);
+    //queue.SelectSort();
     queue.print();
 }

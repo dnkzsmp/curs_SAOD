@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="curs">
-				<Option output="C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/curs.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug"/>
+				<Option output="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/curs.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -32,15 +32,15 @@
 					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 curs"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 curs"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="curs/fast">
-				<Option output="C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/curs.exe" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug"/>
+				<Option output="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/curs.exe" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,76 +53,76 @@
 					<Add directory="C:/mingw32/bin/../lib/gcc/i686-w64-mingw32/7.3.0/../../../../i686-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 curs/fast"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 curs/fast"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug"/>
+				<Option working_dir="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw32/bin/mingw32-make.exe -f &quot;C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/Info.h">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/Info.h">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/Queue.cpp">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/Queue.cpp">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/Queue.h">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/Queue.h">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/createQueue.cpp">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/createQueue.cpp">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/createQueue.h">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/createQueue.h">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/main.cpp">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/main.cpp">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/printInfo.cpp">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/printInfo.cpp">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/printInfo.h">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/printInfo.h">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/quickSort.cpp">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/quickSort.cpp">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/quickSort.h">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/quickSort.h">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/startMenu.cpp">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/startMenu.cpp">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/startMenu.h">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/startMenu.h">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/treeA2.cpp">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/treeA2.cpp">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/src/treeA2.h">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/src/treeA2.h">
 			<Option target="curs"/>
 		</Unit>
-		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs/CMakeLists.txt">
+		<Unit filename="C:/Users/Danil/Desktop/lab-saod2/curs_SAOD/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

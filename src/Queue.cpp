@@ -1,29 +1,9 @@
 #include "Queue.h"
 
-int Queue::cmp(const void *a, const void *b) {
-    const Info *x = (Info *) a;
-    const Info *y = (Info *) b;
-    int comp = strcmp(x->street, y->street);
-    if (comp > 0)
-        return 1;
-    if (comp < 0)
-        return -1;
-    comp = x->numOfHome - y->numOfHome;
-    if (comp < 0)
-        return -1;
-    if (comp > 0)
-        return 1;
-    comp = x->numOfFlat - y->numOfFlat;
-    if (comp < 0)
-        return -1;
-    if (comp > 0)
-        return 1;
-    return 0;
-}
-
 void Queue::push(Info *&el) {
     Node *temp = new Node;
     temp->elArr = el;
+    temp->index = size;
     temp->next = nullptr;
     if (head == nullptr)
         head = tail = temp;
@@ -65,6 +45,31 @@ int Queue::getSize() const {
     return size;
 }
 
+bool Queue::compare(Node *x, Node *y) {
+    if (x->elArr->numOfHome < y->elArr->numOfHome) {
+        return true;
+    } else if (x->elArr->numOfHome == y->elArr->numOfHome) {
+        if (x->elArr->numOfFlat < y->elArr->numOfFlat) {
+            return true;
+        } else if (x->elArr->numOfFlat == y->elArr->numOfFlat) {
+            if (x->elArr->dateOfSettling[0] < y->elArr->dateOfSettling[0]) {
+                return true;
+            } else if (x->elArr->dateOfSettling[0] == y->elArr->dateOfSettling[0]) {
+                if (x->elArr->dateOfSettling[1] < y->elArr->dateOfSettling[1]) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        } else {
+            return false;
+        }
+    }
+    return false;
+}
+
 void Queue::SelectSort() {
     Node *temp = head;
     Info *data;
@@ -72,7 +77,7 @@ void Queue::SelectSort() {
         Node *present = temp->next;
         Node *min = temp;
         while (present) {
-            if (cmp(min, present) > 0)
+            if (compare(min, present))
                 min = present;
             present = present->next;
         }
@@ -83,7 +88,7 @@ void Queue::SelectSort() {
     }
 }
 
-void Queue::deleteEl() {
+/*void Queue::deleteEl() {
     if (head == nullptr) {
         std::cout << "Queue is empty\n";
         return;
@@ -95,16 +100,18 @@ void Queue::deleteEl() {
             tail = nullptr;
         delete temp;
     }
-}
+}*/
 
 Info *&Queue::getEl(int i) {
+    Node *temp = head;
     if (head != nullptr) {
-        int count = 0;
-        if (count == i)
-            return head->elArr;
-    } else
-        head = head->next;
-    return getEl(i - 1);
+        while (temp->index != i) {
+            temp = temp->next;
+        }
+        if (temp->index == i) {
+            return temp->elArr;
+        }
+    }
 }
 
 Queue::~Queue() {

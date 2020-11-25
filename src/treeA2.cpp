@@ -1,11 +1,33 @@
 #include "treeA2.h"
 
+bool compare(Vertex *x, Info *y) {
+    if (x->data->numOfHome < y->numOfHome)
+        return true;
+    else if (x->data->numOfHome == y->numOfHome) {
+        if (x->data->numOfFlat < y->numOfFlat)
+            return true;
+        else if (x->data->numOfFlat == y->numOfFlat) {
+            if (x->data->dateOfSettling[0] < y->dateOfSettling[0])
+                return true;
+            else if (x->data->dateOfSettling[0] == y->dateOfSettling[0]) {
+                if (x->data->dateOfSettling[1] < y->dateOfSettling[1])
+                    return true;
+                else
+                    return false;
+            } else
+                return false;
+        } else
+            return false;
+    }
+    return false;
+}
+
 void addElement(Vertex *&root, Info *&el, Queue &queue) {
     Vertex **p = &root;
     while (*p != nullptr) {
-        if (Queue::cmp(*p, el) < 0)
+        if (!compare(*p, el))
             p = &(*p)->left;
-        else if (Queue::cmp(*p, el) >= 0)
+        else if (compare(*p, el))
             p = &(*p)->right;
         else
             break;
@@ -18,11 +40,8 @@ void addElement(Vertex *&root, Info *&el, Queue &queue) {
     }
 }
 
-void A2(int l, int r, Queue &queue, Vertex *&root) {
+void A2(int l, int r, Queue &queue, Vertex *&root, const int *W) {
     double wes = 0, sum = 0;
-    int W[queue.getSize()];
-    for (int j = 0; j < queue.getSize(); ++j)
-        W[j] = rand() % 100;
     if (l <= r) {
         for (int i = l; i <= r; ++i)
             wes = wes + W[i];
@@ -33,9 +52,8 @@ void A2(int l, int r, Queue &queue, Vertex *&root) {
             sum = sum + W[i];
         }
         addElement(root, queue.getEl(i), queue);
-        queue.deleteEl();
-        A2(l, i - 1, queue, root);
-        A2(i + 1, r, queue, root);
+        A2(l, i - 1, queue, root, W);
+        A2(i + 1, r, queue, root, W);
     }
 }
 
@@ -52,30 +70,43 @@ void ObhodLeftToRight(Vertex *root, short int &quantity) {
     }
 }
 
-int compareDate(char *first, char *second) {
-    char str[2]{}, str2[2]{};
-    strncat(str, first, 2);
-    strncat(str2, second, 2);
-    int result = strcmp(str, str2);
-    if (result < 0)
-        return 1;
-    if (result > 0)
-        return -1;
-    return 0;
-}
-
-Vertex* Search(Vertex *root, short int flat) {
+void Search(Vertex *root, short int home, short int flat, const char *day) {
     Vertex *p = root;
     while (p != nullptr) {
-        //date > p->data->numOfFlat and home > p->data->numOfHome
-        if (flat > p->data->numOfFlat)
+        if (p->data->numOfHome > home)
             p = p->left;
-        else if (flat < p->data->numOfFlat)
+        else if (p->data->numOfHome < home)
             p = p->right;
-        else
+        else if (p->data->numOfHome == home) {
+            if (p->data->numOfFlat > flat)
+                p = p->left;
+            else if (p->data->numOfFlat < flat)
+                p = p->right;
+            else if (p->data->numOfFlat == flat) {
+                if (p->data->dateOfSettling[0] > day[0])
+                    p = p->left;
+                else if (p->data->dateOfSettling[0] < day[0])
+                    p = p->right;
+                else if (p->data->dateOfSettling[0] == day[0]) {
+                    if (p->data->dateOfSettling[1] > day[1])
+                        p = p->left;
+                    else if (p->data->dateOfSettling[1] < day[1])
+                        p = p->right;
+                    else if (p->data->dateOfSettling[1] == day[1])
+                        break;
+                } else
+                    break;
+            } else
+                break;
+        } else
             break;
     }
-    if (p != nullptr)
-        return p;
-    return nullptr;
+    if (p != nullptr) {
+        std::cout << p->data->fio << "\t";
+        std::cout << p->data->street << "\t";
+        std::cout << p->data->numOfHome << "\t";
+        std::cout << p->data->numOfFlat << "\t";
+        std::cout << p->data->dateOfSettling << "\n\n";
+    } else
+        std::cout << "Not found\n\n";
 }

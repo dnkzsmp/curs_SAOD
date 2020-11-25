@@ -8,6 +8,7 @@ private:
     struct Node {
         Info *elArr;
         Node *next;
+        int index;
     };
     Node *head, *tail;
     int size = 0;
@@ -21,10 +22,10 @@ public:
 
     void push(Info *&el);
     void print() const;
-    void deleteEl();
+    //void deleteEl();
+    static bool compare(Node *x, Node *y);
     int getSize() const;
     Info *&getEl(int i);
-    static int cmp(const void *a, const void *b);
     void SelectSort();
     static int index;
     ~Queue();

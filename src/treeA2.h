@@ -8,7 +8,7 @@ struct Vertex {
 };
 int compareInfo(Info *&a, Info *&b);
 void addElement(Vertex *&root, Info *&el, Queue &queue);
-void A2(int l, int r, Queue &queue, Vertex *&root);
+void A2(int l, int r, Queue &queue, Vertex *&root, const int *W);
 void ObhodLeftToRight(Vertex *root, short int &quantity);
-Vertex *Search(Vertex *root, short int flat);
+void Search(Vertex *root, short int home, short int flat, const char *day);
 #endif

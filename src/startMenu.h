@@ -4,5 +4,4 @@
 #include "treeA2.h"
 void startMenu(Info **arr);
 void searchInTree(Vertex *root);
-void printVertex(Vertex *p);
 #endif
