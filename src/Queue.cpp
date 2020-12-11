@@ -14,11 +14,29 @@ void Queue::push(Info *&el) {
     size++;
 }
 
-int Queue::index = 0;
-
-int Queue::getIndex() {
-    index++;
-    return index;
+void Queue::sortWeights(int *arr, int L, int R) {
+    int i = L;
+    int j = R;
+    int X = arr[L];
+    while (i <= j) {
+        while (arr[i] > X) {
+            ++i;
+        }
+        while (arr[j] < X) {
+            --j;
+        }
+        if (i <= j) {
+            std::swap(arr[i], arr[j]);
+            ++i;
+            --j;
+        }
+    }
+    if (L < j) {
+        sortWeights(arr, L, j);
+    }
+    if (i < R) {
+        sortWeights(arr, i, R);
+    }
 }
 
 void Queue::print() const {
@@ -44,63 +62,6 @@ void Queue::print() const {
 int Queue::getSize() const {
     return size;
 }
-
-bool Queue::compare(Node *x, Node *y) {
-    if (x->elArr->numOfHome < y->elArr->numOfHome) {
-        return true;
-    } else if (x->elArr->numOfHome == y->elArr->numOfHome) {
-        if (x->elArr->numOfFlat < y->elArr->numOfFlat) {
-            return true;
-        } else if (x->elArr->numOfFlat == y->elArr->numOfFlat) {
-            if (x->elArr->dateOfSettling[0] < y->elArr->dateOfSettling[0]) {
-                return true;
-            } else if (x->elArr->dateOfSettling[0] == y->elArr->dateOfSettling[0]) {
-                if (x->elArr->dateOfSettling[1] < y->elArr->dateOfSettling[1]) {
-                    return true;
-                } else {
-                    return false;
-                }
-            } else {
-                return false;
-            }
-        } else {
-            return false;
-        }
-    }
-    return false;
-}
-
-void Queue::SelectSort() {
-    Node *temp = head;
-    Info *data;
-    while (temp) {
-        Node *present = temp->next;
-        Node *min = temp;
-        while (present) {
-            if (compare(min, present))
-                min = present;
-            present = present->next;
-        }
-        data = temp->elArr;
-        temp->elArr = min->elArr;
-        min->elArr = data;
-        temp = temp->next;
-    }
-}
-
-/*void Queue::deleteEl() {
-    if (head == nullptr) {
-        std::cout << "Queue is empty\n";
-        return;
-    } else {
-        Node *temp;
-        temp = head;
-        head = head->next;
-        if (head == nullptr)
-            tail = nullptr;
-        delete temp;
-    }
-}*/
 
 Info *&Queue::getEl(int i) {
     Node *temp = head;

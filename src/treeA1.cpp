@@ -1,4 +1,4 @@
-#include "treeA2.h"
+#include "treeA1.h"
 
 bool compare(Vertex *x, Info *y) {
     if (x->data->numOfHome < y->numOfHome)
@@ -22,7 +22,7 @@ bool compare(Vertex *x, Info *y) {
     return false;
 }
 
-void addElement(Vertex *&root, Info *&el, Queue &queue) {
+void addElement(Vertex *&root, Info *&el, Queue &queue, int W) {
     Vertex **p = &root;
     while (*p != nullptr) {
         if (!compare(*p, el))
@@ -35,26 +35,16 @@ void addElement(Vertex *&root, Info *&el, Queue &queue) {
     if (*p == nullptr) {
         *p = new Vertex;
         (*p)->data = el;
+        (*p)->weight = W;
         (*p)->left = nullptr;
         (*p)->right = nullptr;
     }
 }
 
-void A2(int l, int r, Queue &queue, Vertex *&root, const int *W) {
-    double wes = 0, sum = 0;
-    if (l <= r) {
-        for (int i = l; i <= r; ++i)
-            wes = wes + W[i];
-        int i;
-        for (i = l; i < r; ++i) {
-            if (sum < wes / 2 and sum + W[i] >= wes / 2)
-                break;
-            sum = sum + W[i];
-        }
-        addElement(root, queue.getEl(i), queue);
-        A2(l, i - 1, queue, root, W);
-        A2(i + 1, r, queue, root, W);
-    }
+void A1(int size, Queue &queue, Vertex *&root, int *W) {
+    queue.sortWeights(W, 0, size - 1);
+    for (int i = 0; i < size; ++i)
+        addElement(root, queue.getEl(i), queue, W[i]);
 }
 
 void ObhodLeftToRight(Vertex *root, short int &quantity) {
