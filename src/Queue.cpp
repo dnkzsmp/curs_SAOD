@@ -14,6 +14,34 @@ void Queue::push(Info *&el) {
     size++;
 }
 
+<<<<<<< HEAD
+=======
+void Queue::sortWeights(int *arr, int L, int R) {
+    int i = L;
+    int j = R;
+    int X = arr[L];
+    while (i <= j) {
+        while (arr[i] > X) {
+            ++i;
+        }
+        while (arr[j] < X) {
+            --j;
+        }
+        if (i <= j) {
+            std::swap(arr[i], arr[j]);
+            ++i;
+            --j;
+        }
+    }
+    if (L < j) {
+        sortWeights(arr, L, j);
+    }
+    if (i < R) {
+        sortWeights(arr, i, R);
+    }
+}
+
+>>>>>>> 72b0458448d0ecec2bd18eb4b339c3755e189996
 void Queue::print() const {
     if (head == nullptr) {
         std::cout << "Queue is empty\n";
@@ -38,6 +66,7 @@ int Queue::getSize() const {
     return size;
 }
 
+<<<<<<< HEAD
 bool Queue::compare(Node *x, Node *y) {
     if (x->elArr->numOfHome < y->elArr->numOfHome)
         return true;
@@ -78,6 +107,8 @@ void Queue::SelectSort() {
     }
 }
 
+=======
+>>>>>>> 72b0458448d0ecec2bd18eb4b339c3755e189996
 Info *&Queue::getEl(int i) {
     Node *temp = head;
     if (head != nullptr) {

@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 C:\Users\Danil\AppData\Local\JetBrains\CLion2020.3\cygwin_cmake\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /cygdrive/c/Users/Danil/Desktop/lab-saod2/curs_SAOD
 -- The C compiler identification is GNU 9.3.0
 -- The CXX compiler identification is GNU 9.3.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc - works
+=======
+C:\Users\Danil\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\203.5981.166\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Danil\Desktop\curs_SAOD
+-- The C compiler identification is GNU 7.3.0
+-- The CXX compiler identification is GNU 7.3.0
+-- Check for working C compiler: C:/mingw32/bin/gcc.exe
+-- Check for working C compiler: C:/mingw32/bin/gcc.exe - works
+>>>>>>> 72b0458448d0ecec2bd18eb4b339c3755e189996
 -- Detecting C compiler ABI info
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
@@ -15,4 +23,8 @@ C:\Users\Danil\AppData\Local\JetBrains\CLion2020.3\cygwin_cmake\bin\cmake.exe -D
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
+<<<<<<< HEAD
 -- Build files have been written to: /cygdrive/c/Users/Danil/Desktop/lab-saod2/curs_SAOD/cmake-build-debug
+=======
+-- Build files have been written to: C:/Users/Danil/Desktop/curs_SAOD/cmake-build-debug
+>>>>>>> 72b0458448d0ecec2bd18eb4b339c3755e189996

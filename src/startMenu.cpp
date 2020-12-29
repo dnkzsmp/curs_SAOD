@@ -17,12 +17,12 @@ void searchInTree(Vertex *root) {
     Search(root, home, flat, day);
 }
 
-void startA2(Vertex *&root, Queue &queue) {
+void startA1(Vertex *&root, Queue &queue) {
     int W[queue.getSize()];
     for (int &i : W)
         i = rand() % 100;
     W[0] = 0;
-    A2(0, queue.getSize() - 1, queue, root, W);
+    A1(queue.getSize(), queue, root, W);
 }
 
 void startMenu(Info **arr) {
@@ -33,7 +33,7 @@ Point:
     std::cout << "1) View base" << std::endl;
     std::cout << "2) Sort base" << std::endl;
     std::cout << "3) Create queue" << std::endl;
-    std::cout << "4) Show A2 tree" << std::endl;
+    std::cout << "4) Show A1 tree" << std::endl;
     std::cout << "5) Search in tree" << std::endl;
     std::cout << "6) Encoding" << std::endl;
     std::cout << "7) Exit" << std::endl;
@@ -49,8 +49,7 @@ Point:
             binarySearch(arr, queue);
             goto Point;
         case 4:
-            queue.SelectSort();
-            startA2(root, queue);
+            startA1(root, queue);
             ObhodLeftToRight(root, quantity);
             std::cout << "Quantity: " << quantity << std::endl;
             goto Point;
