@@ -1,6 +1,7 @@
 #include "Info.h"
 #include "startMenu.h"
 #include <iostream>
+#include <windows.h>
 
 int main() {
     Info arr[4000];

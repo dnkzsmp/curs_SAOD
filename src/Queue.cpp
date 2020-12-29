@@ -14,13 +14,6 @@ void Queue::push(Info *&el) {
     size++;
 }
 
-int Queue::index = 0;
-
-int Queue::getIndex() {
-    index++;
-    return index;
-}
-
 void Queue::print() const {
     if (head == nullptr) {
         std::cout << "Queue is empty\n";
@@ -46,26 +39,23 @@ int Queue::getSize() const {
 }
 
 bool Queue::compare(Node *x, Node *y) {
-    if (x->elArr->numOfHome < y->elArr->numOfHome) {
+    if (x->elArr->numOfHome < y->elArr->numOfHome)
         return true;
-    } else if (x->elArr->numOfHome == y->elArr->numOfHome) {
-        if (x->elArr->numOfFlat < y->elArr->numOfFlat) {
+    else if (x->elArr->numOfHome == y->elArr->numOfHome) {
+        if (x->elArr->numOfFlat < y->elArr->numOfFlat)
             return true;
-        } else if (x->elArr->numOfFlat == y->elArr->numOfFlat) {
-            if (x->elArr->dateOfSettling[0] < y->elArr->dateOfSettling[0]) {
+        else if (x->elArr->numOfFlat == y->elArr->numOfFlat) {
+            if (x->elArr->street[0] < y->elArr->street[0])
                 return true;
-            } else if (x->elArr->dateOfSettling[0] == y->elArr->dateOfSettling[0]) {
-                if (x->elArr->dateOfSettling[1] < y->elArr->dateOfSettling[1]) {
+            else if (x->elArr->street[0] == y->elArr->street[0]) {
+                if (x->elArr->street[1] < y->elArr->street[1])
                     return true;
-                } else {
+                else
                     return false;
-                }
-            } else {
+            } else
                 return false;
-            }
-        } else {
+        } else
             return false;
-        }
     }
     return false;
 }
@@ -87,20 +77,6 @@ void Queue::SelectSort() {
         temp = temp->next;
     }
 }
-
-/*void Queue::deleteEl() {
-    if (head == nullptr) {
-        std::cout << "Queue is empty\n";
-        return;
-    } else {
-        Node *temp;
-        temp = head;
-        head = head->next;
-        if (head == nullptr)
-            tail = nullptr;
-        delete temp;
-    }
-}*/
 
 Info *&Queue::getEl(int i) {
     Node *temp = head;

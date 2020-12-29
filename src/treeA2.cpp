@@ -7,10 +7,10 @@ bool compare(Vertex *x, Info *y) {
         if (x->data->numOfFlat < y->numOfFlat)
             return true;
         else if (x->data->numOfFlat == y->numOfFlat) {
-            if (x->data->dateOfSettling[0] < y->dateOfSettling[0])
+            if (x->data->street[0] < y->street[0])
                 return true;
-            else if (x->data->dateOfSettling[0] == y->dateOfSettling[0]) {
-                if (x->data->dateOfSettling[1] < y->dateOfSettling[1])
+            else if (x->data->street[0] == y->street[0]) {
+                if (x->data->street[1] < y->street[1])
                     return true;
                 else
                     return false;
@@ -70,7 +70,7 @@ void ObhodLeftToRight(Vertex *root, short int &quantity) {
     }
 }
 
-void Search(Vertex *root, short int home, short int flat, const char *day) {
+void Search(Vertex *root, short int home, short int flat, const char *street) {
     Vertex *p = root;
     while (p != nullptr) {
         if (p->data->numOfHome > home)
@@ -83,16 +83,16 @@ void Search(Vertex *root, short int home, short int flat, const char *day) {
             else if (p->data->numOfFlat < flat)
                 p = p->right;
             else if (p->data->numOfFlat == flat) {
-                if (p->data->dateOfSettling[0] > day[0])
+                if (p->data->street[0] > street[0])
                     p = p->left;
-                else if (p->data->dateOfSettling[0] < day[0])
+                else if (p->data->street[0] < street[0])
                     p = p->right;
-                else if (p->data->dateOfSettling[0] == day[0]) {
-                    if (p->data->dateOfSettling[1] > day[1])
+                else if (p->data->street[0] == street[0]) {
+                    if (p->data->street[1] > street[1])
                         p = p->left;
-                    else if (p->data->dateOfSettling[1] < day[1])
+                    else if (p->data->street[1] < street[1])
                         p = p->right;
-                    else if (p->data->dateOfSettling[1] == day[1])
+                    else if (p->data->street[1] == street[1])
                         break;
                 } else
                     break;

@@ -1,3 +1,1 @@
-C:\Users\Danil\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\202.7660.37\bin\cmake\win\bin\cmake.exe -E rm -f CMakeFiles\curs.dir/objects.a
-C:\mingw32\bin\ar.exe cr CMakeFiles\curs.dir/objects.a @CMakeFiles\curs.dir\objects1.rsp
-C:\mingw32\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\curs.dir/objects.a -Wl,--no-whole-archive  -o curs.exe -Wl,--out-implib,libcurs.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\curs.dir\linklibs.rsp
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/curs.dir/src/main.cpp.o CMakeFiles/curs.dir/src/printInfo.cpp.o CMakeFiles/curs.dir/src/startMenu.cpp.o CMakeFiles/curs.dir/src/quickSort.cpp.o CMakeFiles/curs.dir/src/Queue.cpp.o CMakeFiles/curs.dir/src/createQueue.cpp.o CMakeFiles/curs.dir/src/treeA2.cpp.o CMakeFiles/curs.dir/src/shannon.cpp.o  -o curs.exe -Wl,--out-implib,libcurs.dll.a -Wl,--major-image-version,0,--minor-image-version,0 

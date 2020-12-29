@@ -2,6 +2,7 @@
 #include "printInfo.h"
 #include "quickSort.h"
 #include "startMenu.h"
+#include "shannon.h"
 #include <iostream>
 
 void searchInTree(Vertex *root) {
@@ -34,7 +35,8 @@ Point:
     std::cout << "3) Create queue" << std::endl;
     std::cout << "4) Show A2 tree" << std::endl;
     std::cout << "5) Search in tree" << std::endl;
-    std::cout << "6) Exit" << std::endl;
+    std::cout << "6) Encoding" << std::endl;
+    std::cout << "7) Exit" << std::endl;
     std::cin >> choice;
     switch (choice) {
         case 1:
@@ -56,6 +58,8 @@ Point:
             searchInTree(root);
             goto Point;
         case 6:
+            startEncoding();
+        case 7:
         default:
             break;
     }

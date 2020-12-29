@@ -10,5 +10,5 @@ int compareInfo(Info *&a, Info *&b);
 void addElement(Vertex *&root, Info *&el, Queue &queue);
 void A2(int l, int r, Queue &queue, Vertex *&root, const int *W);
 void ObhodLeftToRight(Vertex *root, short int &quantity);
-void Search(Vertex *root, short int home, short int flat, const char *day);
+void Search(Vertex *root, short int home, short int flat, const char *street);
 #endif
